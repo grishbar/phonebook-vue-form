@@ -41,6 +41,7 @@ export default {
 
 <style lang="scss">
   $breakpoint-tablet: 768px;
+  $breakpoint-mobile: 480px;
   .phone-book-table {
     border-collapse: collapse;
     margin: 0 auto;
@@ -69,6 +70,20 @@ export default {
       font-size: 12px;
       &__cell, &__head-cell {
         padding: 10px 15px;
+      }
+      &__edit-button {
+        font-size: 12px;
+      }
+    }
+  }
+    @media (max-width: $breakpoint-mobile) {
+    .phone-book-table {
+      font-size: 8px;
+      &__cell, &__head-cell {
+        padding: 10px 5px;
+      }
+      &__edit-button {
+        font-size: 8px;
       }
     }
   }
