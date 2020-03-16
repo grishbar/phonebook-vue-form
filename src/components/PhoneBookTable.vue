@@ -1,5 +1,5 @@
 <template>
-    <table class="phone-book-table">
+    <table class="phone-book-table" v-if="allPhoneBookRecords.length">
         <tr class="phone-book-table__head">
             <th class="phone-book-table__head-cell">№</th>
             <th class="phone-book-table__head-cell">ФИО</th>
