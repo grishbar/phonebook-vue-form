@@ -1,24 +1,13 @@
 # phonebook
 
+Небольшая форма для ведения телефонной книги на vue + vuex посмотреть можно - [здесь](https://phonebook-form.herokuapp.com);
+
 ## Project setup
-```
+
 npm install
-```
+npm run serve - start development server on [http://localhost:8080/](http://localhost:8080/)
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Deploy project
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+npm run build - compiles and minifies for production app version in dist folder
+node server.js - start express node.js server for app
