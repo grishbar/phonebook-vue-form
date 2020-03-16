@@ -1,28 +1,41 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <AddRecord />
+    <PhoneBookTable v-on:openEditing="openEditing()" />
+    <EditRecord v-if="isEditRecordOpen" v-on:closeEditing="closeEditing()" />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
+import AddRecord from './components/AddRecord.vue';
+import EditRecord from './components/EditRecord.vue';
+import PhoneBookTable from './components/PhoneBookTable.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
+    AddRecord,
+    EditRecord,
+    PhoneBookTable,
+  },
+  data() {
+    return {
+      isEditRecordOpen: false,
+    };
+  },
+  methods: {
+    closeEditing() {
+      this.isEditRecordOpen = false;
+    },
+    openEditing() {
+      this.isEditRecordOpen = true;
+    },
   },
 };
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+    * {
+      box-sizing: border-box;
+    }
 </style>
